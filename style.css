@@ -1,0 +1,422 @@
+/* GENERAL SETTİNGS */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+*::-webkit-scrollbar{
+    width: 8px;
+    background-color: #eee;
+}
+*::-webkit-scrollbar-track{
+    background-color: #ccc;
+}
+
+*::-webkit-scrollbar-thumb{
+    background-color: var(--color);
+    border-radius: 5px;
+}
+ :root{
+    --color:#5c9ef5;
+ }
+
+html{
+    scroll-behavior: smooth;
+}
+body{
+    font-family: sans-serif;
+}
+h1{
+    font-weight: bold;
+    font-size: 24px;
+}
+p{
+    font-size: 15px;
+    line-height: 25px; /* satırlar arası yükseklik */
+    color: #777;
+    text-align: justify; /* 2 yana yasla */
+}
+a{
+    text-decoration: none;
+    color: #777;
+}
+
+img{
+ max-width: 100%;
+ height: auto;   
+}
+li{
+    list-style-type: none;
+}
+form{
+    max-width: 100%;
+    margin: 30px 0;
+}
+input{
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    outline: none;
+    border: 2px solid var(--color);
+    box-shadow: none;
+    border-radius: 5px;
+}
+textarea{
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    outline: none;
+    border: 2px solid var(--color);
+    box-shadow: none;
+    border-radius: 5px;
+}
+textarea::placeholder{
+    color: black;
+    font-family:sans-serif;
+    cursor: pointer;
+}
+hr{
+    width: 100%;
+    border:1px 0 0 0 solid var(--color); 
+}
+
+
+/* GENERAL CLASS */
+.container{
+    width: 80%;
+    margin: auto;
+}
+.text-left{
+    text-align: left !important;
+}
+.text-right{
+    text-align: right !important;
+}
+.circle{
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    margin: 15px 0; /*yukarı ve aşağıdan boşluk ama sağ ve soldan 0 boşluk*/
+    background-color: var(--color);
+    border-radius: 50%;
+}
+.line{
+    line-height: 8px;
+}
+.line-1, .line-2, .line-3{
+    display: inline-block;
+    background-color: var(--color);
+}
+.line-1{
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+}
+.line-2{
+    width: 80px;
+    height: 1px;
+    
+}
+
+.line-3{
+    width: 60px;
+    height: 1px;
+}
+.btn{
+    padding: 15px 35px;
+    outline: none;
+    border: 2px solid var(--color);
+    background-color: transparent;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background 0.6s;
+}
+.btn:hover{
+    background-color: var(--color);
+    color: #eee;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.6s;
+}
+
+
+
+/* HEADER */
+#header {
+    height: 75vh; /* 80% */
+    background: url(/pictures/arkaplansız.png) center center/contain no-repeat;
+    background-position: top;
+    background-size: 300px;
+    display: flex;
+}
+
+.logo{
+    width: 150px;
+    margin: auto;
+    color: #eee;
+    font-weight: bold;
+    font-size:x-large;
+    color: black;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 70px;
+
+}
+.header-content{
+    max-width: 400px;
+    margin-top: 150px;
+}
+.read-more{
+    margin: 20px 0 30px 0;
+}
+
+#sidenav{
+    width: 100%;
+    height: auto;
+    position: fixed;
+    display: block;
+    top: 0;
+    background: rgba(255, 255, 255, 0.8);
+    transition: background 0.3s ease;
+    z-index: 1;
+}
+#sidenav ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5rem;
+    background: transparent;
+    
+    
+}
+#sidenav ul li a{
+    justify-content: space-between;
+    padding: 16px 16px 16px 16px;
+    color: black;
+    margin: 12px 0;
+    outline: none;
+    font-weight:300;
+
+
+}
+#sidenav ul li a:hover{
+    background-color: var(--color);
+    border: 2px solid var(--color);
+    transition: background 1s;
+    border-radius: 7px;
+    font-weight: bold;
+    color: white;
+}
+
+
+
+/* HAKKIMIZDA ve ÖZELLİKLER */
+#ozelik{
+    padding: 70px 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+
+.ozelik-sol, .ozelik-sag{
+    flex-basis: 50%;
+}
+
+.ozelik-sol img{
+    border-radius: 50px;
+}
+.ozelik-content{
+    max-width: 400px;
+    display: inline-block;
+}
+.ozelik-content h2{
+    font-size: 18px;
+    margin: 50px 0 10px;
+    font-style: italic;
+
+}
+.ozelik-content h3{
+    font-size: 20px;
+    font-style: italic;
+    color: #757575;
+
+}
+
+/* SKİLLS */
+#skills{
+    padding: 70px 0;
+
+}
+.skills-row{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    width: 80%;
+    margin: auto;
+}
+
+.skills-col{
+    flex-basis: 25%;
+    text-align: center;
+}
+
+.skills-col img{
+    width: 100px;
+    border-radius: 5px;
+}
+
+.skills-col h4{
+    margin-bottom: 15px;
+    font-size: 20px;
+    font-weight: 400;
+}
+.skills-col p{
+    text-align: center;
+}
+
+
+/* CONTACT */
+
+#contact{
+    padding: 70px 0;
+}
+
+.contact-row{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.contact-left{
+    flex-basis: 50%;
+}
+.contact-right {
+    flex-basis: 50%;
+}
+.contact-right img{
+    border-radius: 40px;
+}
+
+.contact-content{
+    max-width: 400px;
+}
+
+/* FOOTER */
+#footer{
+    margin: 30px 0;
+
+}
+.footer-row{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+   
+}
+.footer-left{
+    flex-basis: 30%;
+}
+.footer-right{
+    flex-basis: 70%;
+    margin-top: 50px;
+}
+.footer-links{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+.link-title h4{
+    margin-bottom: 15px;
+    color: var(--color);
+}
+.copyright, .logo1{
+    display: block;
+    width: 200px;
+    margin: 40px 0;
+}
+
+.copyright small, .link-title small{
+      display: block;
+      font-size: 14px;
+      color: #777;
+      line-height: 1.8;
+}
+
+/* SOCİAL İCONS */
+.social-icon{
+    position: fixed;
+    top: 35%;
+    left: 0;
+    z-index: 1;
+}
+.social-icon a{
+    display: block;
+    margin: 0 0 15px 20px;
+    cursor: pointer;
+    font-size: 25px;
+}
+.social-icon a:hover{
+  transform: scale(1.2);
+}
+
+/* RESPONSİVE */
+@media only screen and (max-width: 700px){
+    
+
+
+/* GENERAL */
+h1{
+    font-size: 22px;
+}
+.btn{
+    padding: 10px 16px;
+}
+.container{
+    margin: 0px 45px;
+}
+#header{
+    height: 75vh;
+    background: none;
+}
+.logo{
+    width: 175px;
+    text-align: center;
+    align-items: center;
+    display: none;
+    
+
+    /* MOBİL MENU */
+}
+#sidenav ul{
+    display: none;
+    
+}
+
+/* Ozellikler */
+
+.ozelik-sol, .ozelik-sag{
+    flex-basis: 100vh;
+}
+.ozelik-content{
+    margin: 50px 20px 0;
+}
+/* SKİLLS */
+  .skills-col{
+    flex-basis: 100%;
+    margin-bottom: 20px;
+  }
+
+  /* CONTACT */
+  .contact-left, .contact-right{
+    flex-basis: 100%;
+  }
+
+  /* FOOTER */
+  .link-title{
+    flex-basis: 50%;
+    margin-bottom: 30px;
+  }
+}
